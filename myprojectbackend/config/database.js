@@ -1,7 +1,8 @@
+require('dotenv').config()
 const mongoose = require('mongoose');
 
 // MongoDB connection
-const mongoURI = 'mongodb+srv://sankalpshedge33:1234@cluster0.6mvb0jn.mongodb.net/'; // Replace with your actual MongoDB connection string
+const mongoURI = process.env.URI; // Replace with your actual MongoDB connection string
 
 const connectDB = async () => {
   try {
