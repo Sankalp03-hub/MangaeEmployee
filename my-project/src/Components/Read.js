@@ -7,7 +7,7 @@ const Read = () => {
   
 
   function getData() {
-    axios.get("http://localhost:8000/users").then((res) => {
+    axios.get("http://localhost:4000/users").then((res) => {
       console.log(res.data);
       setData(res.data);
     });
@@ -15,7 +15,7 @@ const Read = () => {
 
   function handleDelete(id) {
     axios
-      .delete(`http://localhost:8000/users/${id}`)
+      .delete(`http://localhost:4000/users/${id}`)
       .then(() => {
         getData();
       })
@@ -27,6 +27,8 @@ const Read = () => {
     localStorage.setItem("id", id);
     localStorage.setItem("name", name);
     localStorage.setItem("email", email);
+    localStorage.setItem("age", age);
+    localStorage.setItem("address", address);
   };
 
   useEffect(() => {
@@ -47,6 +49,8 @@ const Read = () => {
             <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Email</th>
+            <th scope="col">Age</th>
+            <th scope="col">Address</th>
             <th scope="col"></th>
             <th scope="col"></th>
           </tr>
@@ -60,6 +64,8 @@ const Read = () => {
                   <th scope="row">{eachData.id}</th>
                   <td>{eachData.name}</td>
                   <td>{eachData.email}</td>
+                  <td>{eachData.age}</td>
+                  <td>{eachData.address}</td>
                   <td>
                     <Link to="/update">
                       <button
@@ -68,7 +74,9 @@ const Read = () => {
                           setToLocalStrorage(
                             eachData.id,
                             eachData.name,
-                            eachData.email
+                            eachData.email,
+                            eachData.age,
+                            eachData.address
                           )
                         }
                       >

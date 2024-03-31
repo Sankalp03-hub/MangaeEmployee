@@ -6,6 +6,8 @@ import { Link } from "react-router-dom"; //when click on submit button
 const Create = () => {
   const [name, setName] = useState(""); // take data by "setName" and store into "name".
   const [email, setEmail] = useState("");
+  const [age, setAge] = useState("");
+  const [address, setAddress] = useState("");
   const history = useNavigate();
 
   const header = { "Access-control-allow-origin": "*" };
@@ -13,9 +15,11 @@ const Create = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("clicked");
-    axios.post("http://localhost:8000/users", {
+    axios.post("http://localhost:4000/users", {
       name: name,
       email: email,
+      age:age,
+      address:address,
       header
     })
     .then(()=>{
@@ -51,6 +55,27 @@ const Create = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+
+        <div className="mb-3">
+          <label className="form-label">Age</label>
+          <input
+            type="text"
+            className="form-control"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+          />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Address</label>
+          <input
+            type="text"
+            className="form-control"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+          />
+        </div>
+
 
         {/* {name}
         {email} */}
