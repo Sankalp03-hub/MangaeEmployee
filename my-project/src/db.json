@@ -1,0 +1,73 @@
+{
+  "users": [
+    {
+      "name": "sachin",
+      "email": "sankalp@gmail.com",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "akash",
+      "email": "akash@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "pavan",
+      "email": "pavan@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "amit",
+      "email": "amit@gmail.com"
+    },
+    {
+      "id": "5",
+      "name": "shubh",
+      "email": "shubh@gmail.com"
+    },
+    {
+      "id": "6",
+      "name": "ankit",
+      "email": "ankit@gmail.com"
+    },
+    {
+      "id": "7",
+      "name": "akshay",
+      "email": "akshay@gmail.com"
+    },
+    {
+      "id": "8",
+      "name": "ketan",
+      "email": "ketan@gmail.com"
+    },
+    {
+      "name": "abhijeet",
+      "email": "abhi@gmail.com",
+      "id": "aa62"
+    },
+    {
+      "id": "0817",
+      "name": "jayessh",
+      "email": "j@gmail.com",
+      "header": {
+        "Access-control-allow-origin": "*"
+      }
+    },
+    {
+      "id": "b20c",
+      "name": "arpit",
+      "email": "arp@gmailcom",
+      "header": {
+        "Access-control-allow-origin": "*"
+      }
+    },
+    {
+      "id": "0141",
+      "name": "aniket",
+      "email": "ami@gmail.com",
+      "header": {
+        "Access-control-allow-origin": "*"
+      }
+    }
+  ]
+}
